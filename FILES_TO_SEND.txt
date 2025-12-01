@@ -1,0 +1,89 @@
+📁 ARQUIVOS PARA COPIAR PARA O RENDER
+
+Você precisa fazer upload DESTES arquivos para o GitHub:
+
+✅ OBRIGATÓRIOS:
+  ✓ main.py
+  ✓ Procfile
+  ✓ requirements.txt
+  ✓ cogs/ (pasta inteira com todos os arquivos)
+
+✅ IMPORTANTES:
+  ✓ .env (mas REMOVA antes de fazer push)
+  ✓ .gitignore
+
+❌ NÃO ENVIE:
+  ✗ .env (contém token - perigo!)
+  ✗ venv/ (ambiente virtual)
+  ✗ __pycache__/ (cache Python)
+  ✗ *.json (logs locais)
+
+═══════════════════════════════════════════════════════
+
+📋 CHECKLIST DE ARQUIVOS
+
+Na sua pasta (C:\Users\rigob\Desktop\BOTS GGMAX\):
+
+  Procfile:
+    └─ Contém: worker: python main.py
+
+  requirements.txt:
+    └─ Contém: discord.py, python-dotenv, etc
+
+  main.py:
+    └─ Bot principal
+
+  cogs/:
+    ├─ __init__.py
+    ├─ basic.py
+    ├─ event_logger.py
+    ├─ tickets.py
+    └─ chatgpt.py (remova se não usar)
+
+═══════════════════════════════════════════════════════
+
+🚀 COMO ENVIAR PARA GITHUB
+
+No PowerShell, execute:
+
+cd C:\Users\rigob\Desktop\BOTS\ GGMAX
+
+# Se é primeira vez:
+git init
+git add .
+git commit -m "Bot Discord"
+git branch -M main
+git remote add origin https://github.com/SEU_USUARIO/bot-discord.git
+git push -u origin main
+
+# Se já tem git:
+git add .
+git commit -m "Atualizações"
+git push origin main
+
+═══════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE - .env NO RENDER
+
+Você NÃO deve fazer push do .env!
+
+Ao invés disso:
+1. No GitHub, seu .env não está (por causa do .gitignore)
+2. No Render, você adiciona as variáveis manualmente
+3. Render reconhece automaticamente
+
+Variáveis a adicionar no Render:
+  DISCORD_TOKEN = seu_token_aqui
+
+═══════════════════════════════════════════════════════
+
+✨ RESUMO
+
+1. Crie repo no GitHub
+2. Faça git push (sem .env)
+3. Conecte no Render
+4. Adicione variáveis
+5. Deploy
+6. ✅ Pronto!
+
+═══════════════════════════════════════════════════════

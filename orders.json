@@ -1,0 +1,15 @@
+{
+    "PED_433398122115366923_20251201003430": {
+        "usuario_id": 433398122115366923,
+        "usuario": "fawus",
+        "produto": "notebook",
+        "cliente": "teste",
+        "email": "teste",
+        "quantidade": 1,
+        "total": 2500.0,
+        "preco_unitario": 2500.0,
+        "status": "pendente",
+        "data": "01/12/2025 00:34",
+        "comprovante": null
+    }
+}

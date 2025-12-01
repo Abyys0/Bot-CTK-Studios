@@ -1,0 +1,91 @@
+📋 CHECKLIST RENDER - BOT DISCORD
+
+═══════════════════════════════════════════════════════
+
+✅ ANTES DE COMEÇAR - VERIFICAÇÃO LOCAL
+
+  □ Bot roda localmente? (python main.py)
+  □ Todos os arquivos estão lá?
+    □ main.py
+    □ Procfile
+    □ requirements.txt
+    □ .env (com token)
+    □ cogs/ (pasta com módulos)
+
+═══════════════════════════════════════════════════════
+
+✅ PASSO 1 - CONTAS NECESSÁRIAS
+
+  □ Conta GitHub criada? (https://github.com)
+  □ Conta Render criada? (https://render.com)
+  □ Token Discord obtido? (https://discord.com/developers)
+
+═══════════════════════════════════════════════════════
+
+✅ PASSO 2 - GITHUB
+
+  □ Repositório criado no GitHub
+  □ Repositório clonado/criado localmente
+  □ Comandos git executados:
+    □ git init
+    □ git add .
+    □ git commit -m "Bot Discord"
+    □ git branch -M main
+    □ git remote add origin ...
+    □ git push -u origin main
+
+═══════════════════════════════════════════════════════
+
+✅ PASSO 3 - RENDER SETUP
+
+  □ Logado no Render
+  □ Clicou em "New" > "Web Service"
+  □ Conectou repositório GitHub
+  □ Preencheu:
+    □ Name: bot-discord
+    □ Runtime: Python 3
+    □ Build: pip install -r requirements.txt
+    □ Start: python main.py
+    □ Type: Free
+
+═══════════════════════════════════════════════════════
+
+✅ PASSO 4 - VARIÁVEIS DE AMBIENTE
+
+  □ Clicou em "Environment"
+  □ Adicionou DISCORD_TOKEN = seu_token
+  □ Salvou as mudanças
+
+═══════════════════════════════════════════════════════
+
+✅ PASSO 5 - DEPLOY
+
+  □ Clicou em "Create Web Service"
+  □ Aguardou 2-3 minutos
+  □ Status ficou VERDE (online)
+  □ Bot apareceu online no Discord
+
+═══════════════════════════════════════════════════════
+
+🎉 SUCESSO!
+
+Se tudo correu bem:
+  ✓ Seu bot está 24/7 no Render
+  ✓ Sobrevive a rebootas
+  ✓ Você pode fazer updates com git push
+  ✓ Logs aparecem no Render
+
+═══════════════════════════════════════════════════════
+
+❓ PROBLEMAS?
+
+Build Failed?
+  → Verifique requirements.txt
+  → Verifique Procfile
+
+Bot não liga?
+  → Veja logs no Render
+  → Confirme token
+  → Teste localmente
+
+═══════════════════════════════════════════════════════

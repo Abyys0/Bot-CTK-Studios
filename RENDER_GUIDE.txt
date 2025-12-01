@@ -1,0 +1,117 @@
+# 🚀 Guia Render - Bot Discord GGMAX
+
+## ✅ Arquivos Já Preparados
+
+✓ Procfile - Configurado para Render
+✓ requirements.txt - Todas as dependências
+✓ .env - Template de variáveis
+✓ .gitignore - Arquivos a ignorar
+✓ main.py - Bot pronto
+✓ cogs/ - Todos os módulos funcionando
+
+## 📋 Passo a Passo para Deploy
+
+### 1️⃣ Preparar GitHub
+
+```bash
+# Abra PowerShell na pasta do projeto
+cd C:\Users\rigob\Desktop\BOTS\ GGMAX
+
+# Inicializar git
+git init
+git add .
+git commit -m "Bot Discord GGMAX - Ready for Render"
+git branch -M main
+git remote add origin https://github.com/SEU_USER/BOTS-GGMAX.git
+git push -u origin main
+```
+
+### 2️⃣ Entrar no Render
+
+1. Acesse https://render.com
+2. Clique em "Sign up" (crie conta)
+3. Conecte sua conta GitHub
+
+### 3️⃣ Criar Web Service
+
+1. Clique em "New" → "Web Service"
+2. Selecione seu repositório
+3. Configure:
+   - **Name**: bots-ggmax (ou qualquer nome)
+   - **Runtime**: Python 3
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `python main.py`
+   - **Instance Type**: Free
+
+### 4️⃣ Adicionar Variáveis de Ambiente
+
+1. Role até "Environment"
+2. Clique em "Add Environment Variable"
+3. Adicione:
+   ```
+   DISCORD_TOKEN = seu_token_aqui
+   ```
+4. (Opcional) Se usar ChatGPT:
+   ```
+   OPENAI_API_KEY = sua_chave_aqui
+   ```
+
+### 5️⃣ Deploy
+
+1. Clique em "Create Web Service"
+2. Aguarde ~2-3 minutos
+3. Quando ver "Build successful", o bot está online! 🎉
+
+## 📊 Monitorar Bot
+
+1. Volte ao dashboard Render
+2. Clique no seu Web Service
+3. Veja os logs em tempo real
+4. Verifique se aparece: `Nagi#9403 está online!`
+
+## ⚠️ Observações Importantes
+
+### Render Free Tier
+- ✅ Roda 24/7
+- ✅ Reboota a cada 15 dias (não há perda de dados)
+- ✅ Grátis por sempre
+- ❌ Pode desligar após 15 min de inatividade (para tier gratuito - prefira pago)
+
+### Para Não Desligar
+Você pode:
+1. Usar tier pago (US$7/mês)
+2. Ou criar um "keep-alive" (ping automático)
+
+## 🔧 Criar Keep-Alive (Opcional)
+
+Se quiser manter 24/7 no tier free, crie este arquivo em `cogs/keep_alive.py`:
+
+```python
+from discord.ext import commands, tasks
+import os
+
+class KeepAlive(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.keep_alive_task.start()
+    
+    @tasks.loop(minutes=5)
+    async def keep_alive_task(self):
+        print(f"Keep-alive: {self.bot.user} está online!")
+
+async def setup(bot):
+    await bot.add_cog(KeepAlive(bot))
+```
+
+## 🆘 Se Algo Der Errado
+
+1. Verifique os logs no Render
+2. Confirme as variáveis de ambiente
+3. Teste localmente: `python main.py`
+4. Reinstale dependências: `pip install -r requirements.txt --upgrade`
+
+## ✨ Pronto!
+
+Seu bot estará rodando 24/7 no Render! 🎉
+
+Qualquer dúvida, é só chamar!

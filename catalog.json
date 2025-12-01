@@ -1,0 +1,11 @@
+{
+    "notebook": {
+        "nome": "notebook",
+        "preco": 2500.0,
+        "estoque": 5,
+        "descricao": "Notebook gamer de alta performance",
+        "vendas": 0,
+        "rating": 0,
+        "avaliações": 0
+    }
+}
